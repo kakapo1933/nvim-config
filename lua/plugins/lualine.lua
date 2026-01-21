@@ -109,7 +109,7 @@ return {
 
           {
             "filename",
-            path = 1,
+            path = 0,
             symbols = { modified = " ●", readonly = " ", unnamed = "" },
             color = function()
               if vim.bo.modified then
