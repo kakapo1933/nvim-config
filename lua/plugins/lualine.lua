@@ -186,24 +186,9 @@ return {
           -- Current language
           {
             "filetype",
-            icon_only = true,
-            padding = { left = 2, right = 0 },
+            padding = { left = 2, right = 2 },
             color = { fg = "#b4befe", bg = "#24273a" },
-            separator = { left = "\u{e0b6}", right = "\u{e0b4}" }, -- Rounded pill separators
-          },
-          {
-            function()
-              local ft = vim.bo.filetype
-              if ft == "" then
-                return "plaintext"
-              end
-              return ft
-            end,
-            color = function()
-              return { fg = "#b4befe", bg = "#24273a" }
-            end,
             separator = { left = "\u{e0b6}", right = "\u{e0b4}" },
-            padding = { left = 0, right = 2 },
           },
         },
         lualine_y = {
