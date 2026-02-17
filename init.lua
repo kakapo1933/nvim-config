@@ -22,6 +22,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
+vim.opt.ignorecase = true  -- case-insensitive search by default
+vim.opt.smartcase = true   -- case-sensitive if pattern contains uppercase
 vim.opt.winbar = "%{get(b:,'gitsigns_head','')}"
 vim.opt.cmdheight = 0
 
