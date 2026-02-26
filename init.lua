@@ -26,6 +26,12 @@ vim.opt.ignorecase = true  -- case-insensitive search by default
 vim.opt.smartcase = true   -- case-sensitive if pattern contains uppercase
 vim.opt.winbar = "%{get(b:,'gitsigns_head','')}"
 vim.opt.cmdheight = 0
+vim.opt.autoread = true
+
+-- Auto-reload files modified externally
+vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold"}, {
+  command = "checktime",
+})
 
 -- Enable treesitter highlighting (Neovim 0.11+ native)
 vim.api.nvim_create_autocmd("FileType", {
